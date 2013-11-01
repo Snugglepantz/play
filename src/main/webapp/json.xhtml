@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+  <ui:composition template="/resources/template/master.xhtml">
+    <ui:define name="title">JSON</ui:define>
+    <ui:define name="headerContent">
+      <li><a href="white.jsf">White Board</a></li>
+      <li class="pure-menu-selected"><a href="json.jsf">JSON</a></li>
+    </ui:define>
+    <ui:define name="content" id="content">
+      <script type="text/javascript" src="http://yui.yahooapis.com/3.10.3/build/yui/yui-min.js"></script>
+      <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+      <div class="pure-u-1 l-centered">
+        <h1 class="pure-u-1">JSON</h1>
+        <h2 class="pure-u">JSON Experiment</h2>
+      </div>
+      <div id="jsonTest">
+        <div id="demo" class="yui3-skin-sam">
+          <input id="searchterm" type="text" /> 
+          <div id="results"></div>
+        </div>
+        <script type="text/javascript" src="resources/js/json.js"></script>
+      </div>
+    </ui:define>
+
+  </ui:composition>
+</html>

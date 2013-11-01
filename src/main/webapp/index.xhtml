@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+  <ui:composition template="/resources/template/master.xhtml">
+    <ui:define name="title">Main</ui:define>
+    <ui:define name="headerContent">
+      <li><a href="white.jsf">White Board</a></li>
+      <li><a href="json.jsf">JSON</a></li>
+    </ui:define>
+    <ui:define name="content" id="content">  
+      <div class="splash">
+        <div class="splash-text l-centered">
+          <h1 class="splash-head">
+            I Stole My Own Code
+          </h1>
+          <h2 class="splash-subhead">
+            Random Content
+          </h2>
+          <a href="white.jsf" class="pure-button primary-button">White Board</a>
+          <a href="json.jsf" class="pure-button primary-button">JSON</a>
+        </div>
+      </div>
+    </ui:define>
+
+  </ui:composition>
+</html>

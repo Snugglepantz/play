@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+  <ui:composition template="/resources/template/master.xhtml">
+    <ui:define name="title">Chat</ui:define>
+    <ui:define name="headerContent">
+      <li class="pure-menu-selected"><a href="chat.jsf">Chat</a></li>
+      <li ><a href="json.jsf">JSON</a></li>
+    </ui:define>
+    <ui:define name="content" id="content">
+      <div class="pure-u-1 l-centered">
+        <h1 class="pure-u-1">Chat</h1>
+        <h2 class="pure-u">Chat Example</h2>
+      </div>
+      <div class="pure-g-r">
+        <div class="pure-u-1 l-centered">
+          <div></div>
+        </div>
+      </div>
+      <form class="pure-form pure-form-stacked l-centered" name="inputForm">
+        <label for="name">Name</label>
+        <input id="name" type="text"/>
+
+        <label for="msg">Message</label>
+        <input id="msg" type="text"/>
+
+        <button class="pure-button notice" type="button" ng-click="sendMessage();">Send</button>
+      </form>
+    </ui:define>
+
+  </ui:composition>
+</html>

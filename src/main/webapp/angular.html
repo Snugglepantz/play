@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="namesmvc">
+  <head>
+    <script src="resources/js/ang/angular/angular.js"></script>
+    <script src="resources/js/ang/angular/angular-resource.js"></script>
+    <script src="resources/js/ang/customer.js"></script>
+    <script src="resources/js/ang/services/personService.js"></script>
+    <script src="resources/js/ang/controllers/namesCtrl.js"></script>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style>
+      [ng-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="namesapp" ng-cloak>
+      <header id="header">
+
+        <form id="name-form">
+          <div ng-controller="NamesCtrl" id="">
+            <div id="panelTitle" title="Names list">
+              Name <input id="name" ng-model="name" type="text"/>
+              <br/>
+              City <input id="city" ng-model="city" type="text"/>
+              <br/>
+              State <input id="state" ng-model="state" type="text"/>
+              <br/>
+              <button ng-click="addPerson()" type="button">Save</button>
+
+
+              <ul id="names-list">
+                <li ng-repeat="person in data">
+                  <div class="view">
+                    <label>{{person.name}}</label>
+                    <label>{{person.city}}</label>
+                    <label>{{person.state}}</label>
+                    <button type="button" ng-click="removeName(person)">Remove</button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </form>
+      </header>
+    </section>
+
+  </body>
+</html>

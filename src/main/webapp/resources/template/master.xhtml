@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+  <h:head>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.1.0/pure-min.css"/>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet"/>
+    <h:outputStylesheet library="css" name="layout.css" />
+
+    <ui:insert name="resources"/>
+    <title><ui:insert name="title">Default Title</ui:insert></title>
+  </h:head>
+
+  <h:body>
+    <div id="page">
+      <ui:insert name="header">
+        <ui:include src="/resources/template/header.xhtml"/>
+      </ui:insert>
+      <div class="content">
+        <ui:insert name="content">
+          <ui:include src="/resources/template/content.xhtml"/>
+        </ui:insert>
+      </div>
+      <ui:insert name="footer">
+        <ui:include src="/resources/template/footer.xhtml"/>
+      </ui:insert>
+    </div>
+  </h:body>
+
+</html>
